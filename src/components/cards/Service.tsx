@@ -1,11 +1,14 @@
 import { Paragraph } from "../shared/Paragraph";
-
+//utilizado na secao de servicos
+// Define a interface ServiceProps para tipar as propriedades (props)
+// que o componente Service espera receber.
 interface ServiceProps {
   title: string;
   description: string;
   icon: React.ReactNode;
 }
 
+// Componente Service: Exibe um cartão individual de serviço com ícone, título e descrição.
 export const Service = ({ title, description, icon }: ServiceProps) => {
   return (
     <div

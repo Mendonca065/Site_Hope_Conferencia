@@ -4,6 +4,8 @@ interface ButtonProps {
   onClick?: () => void;
 }
 
+// Componente de botao reutilizável
+
 export const Button = ({ onClick, children, className = "" }: ButtonProps) => {
   return (
     <button

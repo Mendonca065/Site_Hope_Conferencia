@@ -3,6 +3,8 @@ interface ContainerProps {
   className?: string;
 }
 
+// Componente de container reutilizável
+
 export const Container = ({ children, className = "" }: ContainerProps) => {
   return (
     <div

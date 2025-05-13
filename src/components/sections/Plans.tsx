@@ -4,6 +4,8 @@ import { Container } from "../shared/Container";
 import { Paragraph } from "../shared/Paragraph";
 import { Title } from "../shared/Title";
 
+// Componente Plans: Seção de Planos da página inicial (Plans section).
+
 export const Plans = () => {
   return (
     <section id="plans" className="py-5">

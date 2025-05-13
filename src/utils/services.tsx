@@ -1,3 +1,7 @@
+// Este array contém os serviços destacados na seção de
+// "Benefícios" ou "Por que escolher a G3NET".
+// Cada serviço possui um título, uma descrição e um ícone
+// SVG embutido para visualização.
 export const services = [
   {
     title: "Ultra Velocidade",

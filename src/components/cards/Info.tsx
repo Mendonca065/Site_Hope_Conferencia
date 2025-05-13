@@ -1,5 +1,7 @@
 import { Paragraph } from "../shared/Paragraph";
 
+//Utilizado na sessao de suporte
+
 interface InfoProps {
   title: string;
   description: string;

@@ -4,6 +4,8 @@ interface BtnLinkProps {
   className?: string;
 }
 
+// Componente de botão com aparência estilizada e funcionalidade de link
+
 export const BtnLink = ({ href, text, className = "" }: BtnLinkProps) => {
   return (
     <a

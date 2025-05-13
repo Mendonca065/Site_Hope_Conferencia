@@ -3,6 +3,8 @@ import { Container } from "../shared/Container";
 import { Paragraph } from "../shared/Paragraph";
 import { Title } from "../shared/Title";
 
+// Componente Support: Seção de Sobre nos da empresa e contatos para suporte da página inicial (Support section).
+
 export const Support = () => {
   return (
     <section id="support">

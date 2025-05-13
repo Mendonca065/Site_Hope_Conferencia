@@ -3,6 +3,8 @@ interface NavItemProps {
   text: string;
 }
 
+// Componente de navbar reutilizável
+
 export const NavItem = ({ href, text }: NavItemProps) => {
   return (
     <li>

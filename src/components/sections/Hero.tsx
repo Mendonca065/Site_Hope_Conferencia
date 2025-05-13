@@ -2,6 +2,8 @@ import { Button } from "../shared/Button";
 import { Container } from "../shared/Container";
 import { Paragraph } from "../shared/Paragraph";
 
+// Componente Hero: Seção principal da página inicial (Hero section).
+
 export const Hero = () => {
   return (
     <section className="relative pt-32 lg:pt-36" id="home">

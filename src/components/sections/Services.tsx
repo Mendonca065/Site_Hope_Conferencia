@@ -4,6 +4,8 @@ import { Container } from "../shared/Container";
 import { Paragraph } from "../shared/Paragraph";
 import { Title } from "../shared/Title";
 
+// Componente Services: Seção Servicos oferecidos da página inicial (Service section).
+
 export const Services = () => {
   return (
     <section id="services">

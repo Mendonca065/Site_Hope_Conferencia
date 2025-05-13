@@ -3,6 +3,8 @@ import logo from "../../assets/LOGO HIGH TRANSPARENT.png";
 import { navItems } from "./Navbar";
 import { NavItem } from "../shared/NavItem";
 
+// Componente Footer: Rodapé da página, exibindo o logo, nome da marca e links de navegação.
+
 export const Footer = () => {
   return (
     <footer className="relative pt-28 rounded-t-3xl bg-box-bg">

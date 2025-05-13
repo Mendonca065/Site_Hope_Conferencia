@@ -1,3 +1,10 @@
+// Lista de Planos de Internet com Preços e Benefícios
+// ----------------------------------------------------------
+// Este array contém os dados usados para exibir os planos
+// comerciais disponíveis na G3NET.
+// Cada objeto representa um plano com título, preço e
+// recursos (features)
+
 export const plansPricing = [
   {
     title: "Ultra 600 Mbps",

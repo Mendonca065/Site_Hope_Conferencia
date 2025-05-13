@@ -7,6 +7,9 @@ interface Layoutprops {
   children: React.ReactNode;
 }
 
+// Componente Layout principal
+// Responsável por aplicar uma estrutura padrão nas páginas (Navbar, conteúdo e Footer)
+
 export const Layout = ({ title, children }: Layoutprops) => {
   useEffect(() => {
     document.title = title;
