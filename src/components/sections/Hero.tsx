@@ -24,7 +24,13 @@ export const Hero = () => {
             Navegue, trabalhe e se divirta com a melhor experiência de internet.
             Planos que cabem no seu bolso com máxima velocidade.
           </Paragraph>
-          <Button className="min-w-max text-blue">
+          <Button //toda seesão foi alterada, funcionalidade adicionada + animação
+            className="min-w-max text-blue transform transition-all duration-300 hover:scale-110 hover:-translate-y-1"
+            onClick={() => {
+              const plansSection = document.getElementById("plans");
+              plansSection?.scrollIntoView({ behavior: "smooth" });
+            }}
+          >
             <span className="relative z-[5]">Assine Já</span>
           </Button>
         </div>
