@@ -6,26 +6,30 @@ import { Paragraph } from "../shared/Paragraph";
 
 export const Hero = () => {
   return (
-    <section className="relative pt-32 lg:pt-36" id="home">
+    // Fundo da seção hero alterado para #D3DEEC e altura aumentada
+    <section
+      className="relative pt-32 lg:pt-36 min-h-[70vh] lg:min-h-[80vh] flex items-center"
+      id="home"
+      style={{ backgroundColor: "#D3DEEC" }}
+    >
       <Container className="flex flex-col lg:flex-row gap-10 lg:gap-12">
         <div className="absolute w-full lg:w-1/2 inset-y-0 lg:right-0">
-          <span className="absolute -left-6 md:left-4 top-24 lg:top-28 w-24 h-24 rotate-90 skew-x-12 rounded-3xl bg-gradient-to-r from-blue-600 to-violet-600 blur-xl opacity-60 lg:opacity-95 lg:block hidden"></span>
-          <span className="absolute right-4 bottom-12 w-24 h-24 rounded-3xl bg-primary blur-xl opacity-80"></span>
+          <span className="absolute -left-6 md:left-4 top-24 lg:top-28 w-24 h-24 rotate-90 skew-x-12 rounded-3xl bg-gradient-to-r from-[#0096FF] to-blue-400 blur-xl opacity-60 lg:opacity-95 lg:block hidden"></span>
+          <span className="absolute right-4 bottom-12 w-24 h-24 rounded-3xl bg-[#0096FF] blur-xl opacity-80"></span>
         </div>
 
-        <div className="relative flex flex-col items-center text-center lg:text-left lg:py-8 lg:items-start lg:max-w-none max-w-3xl mx-auto lg:mx-0 lg:flex-1 lg:w-1/2">
-          <h1 className="text-heading-1 text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-bold">
+        <div className="relative flex flex-col items-start text-left lg:py-8 lg:max-w-none max-w-3xl mx-auto lg:mx-0 lg:flex-1 lg:w-1/2">
+          {" "}
+          <h1 className="text-heading-1 text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-bold w-full">
             Tenha a Internet mais Rápida com{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-violet-600 ml-2">
-              G3NET
-            </span>
+            <span className="text-[#0096FF]">G3NET</span>
           </h1>
           <Paragraph className="mt-8">
             Navegue, trabalhe e se divirta com a melhor experiência de internet.
             Planos que cabem no seu bolso com máxima velocidade.
           </Paragraph>
-          <Button //toda seesão foi alterada, funcionalidade adicionada + animação
-            className="min-w-max text-blue transform transition-all duration-300 hover:scale-110 hover:-translate-y-1"
+          <Button
+            className="min-w-max text-white bg-[#0096FF] hover:bg-blue-500 transform transition-all duration-300 hover:scale-110 hover:-translate-y-1 mt-8"
             onClick={() => {
               const plansSection = document.getElementById("plans");
               plansSection?.scrollIntoView({ behavior: "smooth" });
