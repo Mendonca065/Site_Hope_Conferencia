@@ -40,7 +40,7 @@ export const Plans = () => {
     : apartmentPlans; // Planos normais para apartamento
 
   const generateWhatsAppLink = (plan: Plan) => {
-    const baseUrl = "https://wa.me/5583931429400"; // G3NET's WhatsApp number
+    const baseUrl = "https://wa.me/558331429400"; // G3NET's WhatsApp number
     const message = encodeURIComponent(
       `Olá! Gostaria de contratar o plano ${plan.title} por ${plan.price}`
     );
@@ -178,19 +178,37 @@ export const Plans = () => {
                     )}                    {/* Título do plano - aumentado e com margem maior */}
                     <h3 className="text-4xl font-bold mb-8 text-gray-900">
                       {plan.title}
-                    </h3>                    {/* Lista de características com ícones de check */}
+                    </h3>                    {/* Seção de velocidades em destaque */}                    <div className="mb-8 bg-gradient-to-br from-gray-50 to-white rounded-2xl p-4 border border-gray-100 shadow-sm">
+                      <div className="space-y-4">                        {/* Download */}
+                        <div>
+                          <div className="text-sm text-gray-500 font-medium">Download</div>
+                          <div className="text-xl font-bold text-[#0096FF]">
+                            {plan.features.find(f => f.includes('Download'))?.replace('Download até ', '')} {/* Localiza features com nome Download */}
+                          </div>
+                        </div>
+
+                        {/* Upload */}
+                        <div>
+                          <div className="text-sm text-gray-500 font-medium">Upload</div>
+                          <div className="text-xl font-bold text-[#0096FF]">
+                            {plan.features.find(f => f.includes('Upload'))?.replace('Upload até ', '')} {/* Localiza features com nome upload */}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Outras características */}
                     <ul className="flex-1 space-y-3 text-left text-gray-600">
-                      {plan.features.map((feature, keyFeatures) => (
+                      {plan.features
+                        .filter(feature => !feature.includes('Download') && !feature.includes('Upload')) // Filtra as features para não incluir download e upload
+                        .map((feature, keyFeatures) => (
                         <li
-                          key={keyFeatures}
-                          className="flex items-center gap-2"
+                          key={keyFeatures}  
+                          className="flex items-center gap-2" 
                         >
-                          {" "}
                           <svg
                             className={`w-5 h-5 ${
-                              plan.bestValue
-                                ? "text-[#0096FF]"
-                                : "text-gray-400"
+                              plan.bestValue ? "text-[#0096FF]" : "text-gray-400"
                             }`}
                             viewBox="0 0 20 20"
                             fill="currentColor"

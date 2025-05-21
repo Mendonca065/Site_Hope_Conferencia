@@ -13,13 +13,17 @@ export interface Plan {
   bestValue?: boolean;
 }
 
+// Array de planos de internet para apartamentos
+// Cada plano tem um título, preço e uma lista de recursos
+// O campo bestValue é opcional e indica o melhor custo-benefício
+// nas features Manter o padrão "Download até X Mbps" e "Upload até Y Mbps"
 export const apartmentPlans: Plan[] = [
   {
     title: "600 MEGA",
     price: "R$99,90/mês",
     features: [
-      "Download até 600 MEGA",
-      "Upload até 300 MEGA",
+      "Download até 600 Mbps",
+      "Upload até 300 Mbps",
       "1 ponto Wi-Fi 6 de alta performace",
       "Instalação Gratuita",
     ],
@@ -28,8 +32,8 @@ export const apartmentPlans: Plan[] = [
     title: "1 GIGA",
     price: "R$119,90/mês",
     features: [
-      "Download até 1000 MEGA",
-      "Upload até 500 MEGA",
+      "Download até 1000 Mbps",
+      "Upload até 500 Mbps",
       "1 ponto Wi-Fi 6 Plus de alta performace",
       "Streaming 4K sem travamentos",
       "Instalação Gratuita",
@@ -40,8 +44,8 @@ export const apartmentPlans: Plan[] = [
     title: "1.5 GIGA",
     price: "R$249,90/mês",
     features: [
-      "Download até 1500 MEGA",
-      "Upload até 750 MEGA",
+      "Download até 1500 Mbps",
+      "Upload até 750 Mbps",
       "1 ponto Wi-Fi 7 de alta performace",
       "Roteador com portas 2.5GE",
       "Instalação Gratuita",
@@ -51,32 +55,44 @@ export const apartmentPlans: Plan[] = [
 
 export const housePlans: Plan[] = [
   {
-    title: "Essencial",
+    title: "House 1 GIGA",
     price: "R$250/mês",
     features: [
-      "Download até 1000 MEGA",
-      "Upload até 500 MEGA",
-      "Wi-Fi 6+ (ultravelocidade)",
+      "Download até 1000 Mbps",
+      "Upload até 500 Mbps",
+      "1 Ponto Wi-Fi 6+ (ultravelocidade)",
       "Portas Gigabit Ethernet",
       "Projeto de rede exclusivo para sua residência",
       "Garantia de velocidade contratada",
       "Instalação Gratuita",
-      "Suporte Técnico 24/7",
+    ],
+  },
+  {
+    title: "House Mesh 1 GIGA",
+    price: "R$280/mês",
+    features: [
+      "Download até 1000 Mbps",
+      "Upload até 500 Mbps",
+      "Cobertura Amplicada com Mesh",
+      "2 Ponto Wi-Fi 6+ (ultravelocidade)",
+      "Portas Gigabit Ethernet",
+      "Projeto de rede exclusivo para sua residência",
+      "Garantia de velocidade contratada",
+      "Instalação Gratuita",
     ],
     bestValue: true,
   },
   {
-    title: "Premium",
-    price: "R$450/mês",
+    title: "House 1.5 GIGA",
+    price: "R$350/mês",
     features: [
-      "Download até 2000 MEGA",
-      "Upload até 1000 MEGA",
-      "Ponto Wi-Fi 7 (tecnologia de ponta)",
+      "Download até 1500 Mbps",
+      "Upload até 750 Mbps",
+      "1 Ponto Wi-Fi 7 (tecnologia de ponta)",
       "Portas 2.5 Gigabit Ethernet",
       "Projeto de rede exclusivo para sua residência",
       "Garantia de velocidade contratada",
       "Instalação Gratuita",
-      "Suporte Técnico 24/7",
     ],
   },
 ];
@@ -89,7 +105,7 @@ export const housePlans: Plan[] = [
  */
 export const apartmentMeshPlans: Plan[] = [
   {
-    title: "Mesh 800 Mega",
+    title: "Mesh 800 MEGA",
     price: "R$129,90/mês",
     features: [
       "Download até 800 Mbps",
@@ -101,7 +117,7 @@ export const apartmentMeshPlans: Plan[] = [
     bestValue: true,
   },
   {
-    title: "Mesh 1 Giga",
+    title: "Mesh 1 GIGA",
     price: "R$149,90/mês",
     features: [
       "Download até 1000 Mbps",

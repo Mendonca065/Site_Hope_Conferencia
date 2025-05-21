@@ -4,9 +4,9 @@
 // SVG embutido para visualização.
 export const services = [
   {
-    title: "Conexão segura",
+    title: "Conexão segura.",
     description:
-      "Sua navegação sempre protegida com as melhores tecnologias de segurança digital.",
+      "Sua navegação sempre protegida com as melhores tecnologias de segurança.",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -25,9 +25,9 @@ export const services = [
     ),
   },
   {
-    title: "Suporte 24/7",
+    title: "Eficiência.",
     description:
-      "Equipe técnica disponível 24 horas por dia, 7 dias por semana para te ajudar.",
+      "Equipe técnica sempre disponível para te auxiliar e resolver problemas.",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -46,7 +46,7 @@ export const services = [
     ),
   },
   {
-    title: "Ultra velocidade",
+    title: "Ultra velocidade.",
     description:
       "Fibra óptica de ponta a ponta garantindo alta velocidade e baixa latência.",
     icon: (
@@ -67,9 +67,9 @@ export const services = [
     ),
   },
   {
-    title: "Instalação rápida",
+    title: "Soluções personalizadas.",
     description:
-      "Instalação ágil e profissional em até 48 horas após a contratação.",
+      "Planos e serviços adaptados para atender cada necessidades.",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -82,13 +82,13 @@ export const services = [
         <path
           strokeLinecap="round"
           strokeLinejoin="round"
-          d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"
+          d="M10.5 6h9.75M10.5 6a1.5 1.5 0 1 1-3 0m3 0a1.5 1.5 0 1 0-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m-9.75 0h9.75"
         />
       </svg>
     ),
   },
   {
-    title: "Sem quedas",
+    title: "Estabilidade.",
     description:
       "Rede redundante que garante a maior estabilidade e continuidade do mercado.",
     icon: (
@@ -109,7 +109,7 @@ export const services = [
     ),
   },
   {
-    title: "Qualidade premium",
+    title: "Qualidade premium.",
     description:
       "Equipamentos de última geração para a melhor experiência de internet.",
     icon: (
