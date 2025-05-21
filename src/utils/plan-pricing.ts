@@ -105,6 +105,17 @@ export const housePlans: Plan[] = [
  */
 export const apartmentMeshPlans: Plan[] = [
   {
+    title: "Mesh 600 MEGA",
+    price: "R$119,90/mês",
+    features: [
+      "Download até 600 Mbps",
+      "Upload até 300 Mbps",
+      "2 Pontos Mesh Wi-Fi 6+", // Melhor custo-benefício
+      "Instalação Gratuita",
+    ],
+    bestValue: true,
+  },
+  {
     title: "Mesh 800 MEGA",
     price: "R$129,90/mês",
     features: [

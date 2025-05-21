@@ -12,7 +12,7 @@
    Essas variáveis serão utilizadas para manter consistência
    e facilitar futuras alterações de tema.
 ========================================================== */
-@theme {
+:root {
   --color-bg: 255 255 255; /* Cor de fundo principal */
   --color-box: 255 255 255; /* Cor de fundo das caixas (cards, containers) */
   --box-border: 229 231 235; /* Cor da borda das caixas */

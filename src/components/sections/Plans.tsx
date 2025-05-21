@@ -9,8 +9,6 @@ import { Button } from "../shared/Button";
 import { Container } from "../shared/Container";
 import { FadeInSection } from "../shared/FadeInSection";
 import { Paragraph } from "../shared/Paragraph";
-import { Title } from "../shared/Title";
-
 /**
  * Componente Plans: Seção de planos de internet da página inicial
  *
