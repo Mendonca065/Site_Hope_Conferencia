@@ -35,7 +35,12 @@ export const Navbar = () => {
               ))}
             </ul>
             <div className="lg:min-w-max flex items-center sm:w-max w-full pb-6 lg:pb-0 border-b border-box-border lg:border-0 px-6 lg:px-0">
-              <BtnLink text="Central do Cliente" href="https://g3net.centralassinante.com.br/#/login"  className="" /> 
+              <BtnLink
+                text="Central do Cliente"
+                href="https://g3net.centralassinante.com.br/#/login"
+                className=""
+                target="_blank"
+              />
             </div>
           </div>
         </nav>

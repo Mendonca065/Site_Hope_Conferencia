@@ -86,13 +86,19 @@ export const Plans = () => {
                   ? "bg-white shadow-md text-blue-600"
                   : "text-gray-600 hover:text-gray-900"
               }`}
-            >              <svg
+            >
+              {" "}
+              <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
                 fill="currentColor"
                 className="w-5 h-5"
               >
-                <path fillRule="evenodd" d="M4.5 2.25a.75.75 0 000 1.5v16.5h-.75a.75.75 0 000 1.5h16.5a.75.75 0 000-1.5h-.75V3.75a.75.75 0 000-1.5h-15zM9 6a.75.75 0 000 1.5h1.5a.75.75 0 000-1.5H9zm-.75 3.75A.75.75 0 019 9h1.5a.75.75 0 010 1.5H9a.75.75 0 01-.75-.75zM9 12a.75.75 0 000 1.5h1.5a.75.75 0 000-1.5H9zm3.75-5.25A.75.75 0 0113.5 6H15a.75.75 0 010 1.5h-1.5a.75.75 0 01-.75-.75zM13.5 9a.75.75 0 000 1.5H15A.75.75 0 0015 9h-1.5zm-.75 3.75a.75.75 0 01.75-.75H15a.75.75 0 010 1.5h-1.5a.75.75 0 01-.75-.75zM9 19.5v-1.5h6v1.5H9z" clipRule="evenodd" />
+                <path
+                  fillRule="evenodd"
+                  d="M4.5 2.25a.75.75 0 000 1.5v16.5h-.75a.75.75 0 000 1.5h16.5a.75.75 0 000-1.5h-.75V3.75a.75.75 0 000-1.5h-15zM9 6a.75.75 0 000 1.5h1.5a.75.75 0 000-1.5H9zm-.75 3.75A.75.75 0 019 9h1.5a.75.75 0 010 1.5H9a.75.75 0 01-.75-.75zM9 12a.75.75 0 000 1.5h1.5a.75.75 0 000-1.5H9zm3.75-5.25A.75.75 0 0113.5 6H15a.75.75 0 010 1.5h-1.5a.75.75 0 01-.75-.75zM13.5 9a.75.75 0 000 1.5H15A.75.75 0 0015 9h-1.5zm-.75 3.75a.75.75 0 01.75-.75H15a.75.75 0 010 1.5h-1.5a.75.75 0 01-.75-.75zM9 19.5v-1.5h6v1.5H9z"
+                  clipRule="evenodd"
+                />
               </svg>
               Apartamento
             </button>
@@ -162,7 +168,8 @@ export const Plans = () => {
             <FadeInSection key={key} delay={key * 200}>
               {/* Card do plano com gradiente na borda e hover animation */}
               <div className="relative group h-full transform transition-all duration-300 hover:scale-105">
-                {" "}                <div
+                {" "}
+                <div
                   className={`${
                     plan.bestValue ? "bg-[#0096FF]" : "bg-white"
                   } p-1 rounded-3xl h-full shadow-lg`}
@@ -173,65 +180,83 @@ export const Plans = () => {
                       <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#0096FF] text-white text-sm font-medium px-4 py-1 rounded-full">
                         Mais popular
                       </div>
-                    )}                    {/* Título do plano - aumentado e com margem maior */}
+                    )}{" "}
+                    {/* Título do plano - aumentado e com margem maior */}
                     <h3 className="text-4xl font-bold mb-8 text-gray-900">
                       {plan.title}
-                    </h3>                    {/* Seção de velocidades em destaque */}                    <div className="mb-8 bg-gradient-to-br from-gray-50 to-white rounded-2xl p-4 border border-gray-100 shadow-sm">
-                      <div className="space-y-4">                        {/* Download */}
+                    </h3>{" "}
+                    {/* Seção de velocidades em destaque */}{" "}
+                    <div className="mb-8 bg-gradient-to-br from-gray-50 to-white rounded-2xl p-4 border border-gray-100 shadow-sm">
+                      <div className="space-y-4">
+                        {" "}
+                        {/* Download */}
                         <div>
-                          <div className="text-sm text-gray-500 font-medium">Download</div>
+                          <div className="text-sm text-gray-500 font-medium">
+                            Download
+                          </div>
                           <div className="text-xl font-bold text-[#0096FF]">
-                            {plan.features.find(f => f.includes('Download'))?.replace('Download até ', '')} {/* Localiza features com nome Download */}
+                            {plan.features
+                              .find((f) => f.includes("Download"))
+                              ?.replace("Download até ", "")}{" "}
+                            {/* Localiza features com nome Download */}
                           </div>
                         </div>
-
                         {/* Upload */}
                         <div>
-                          <div className="text-sm text-gray-500 font-medium">Upload</div>
+                          <div className="text-sm text-gray-500 font-medium">
+                            Upload
+                          </div>
                           <div className="text-xl font-bold text-[#0096FF]">
-                            {plan.features.find(f => f.includes('Upload'))?.replace('Upload até ', '')} {/* Localiza features com nome upload */}
+                            {plan.features
+                              .find((f) => f.includes("Upload"))
+                              ?.replace("Upload até ", "")}{" "}
+                            {/* Localiza features com nome upload */}
                           </div>
                         </div>
                       </div>
                     </div>
-
                     {/* Outras características */}
                     <ul className="flex-1 space-y-3 text-left text-gray-600">
                       {plan.features
-                        .filter(feature => !feature.includes('Download') && !feature.includes('Upload')) // Filtra as features para não incluir download e upload
+                        .filter(
+                          (feature) =>
+                            !feature.includes("Download") &&
+                            !feature.includes("Upload")
+                        ) // Filtra as features para não incluir download e upload
                         .map((feature, keyFeatures) => (
-                        <li
-                          key={keyFeatures}  
-                          className="flex items-center gap-2" 
-                        >
-                          <svg
-                            className={`w-5 h-5 ${
-                              plan.bestValue ? "text-[#0096FF]" : "text-gray-400"
-                            }`}
-                            viewBox="0 0 20 20"
-                            fill="currentColor"
+                          <li
+                            key={keyFeatures}
+                            className="flex items-center gap-2"
                           >
-                            <path
-                              fillRule="evenodd"
-                              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                              clipRule="evenodd"
-                            />
-                          </svg>
-                          <span>{feature}</span>
-                        </li>
-                      ))}
-                    </ul>                    {/* Preço e botão de ação */}
+                            <svg
+                              className={`w-5 h-5 ${
+                                plan.bestValue
+                                  ? "text-[#0096FF]"
+                                  : "text-gray-400"
+                              }`}
+                              viewBox="0 0 20 20"
+                              fill="currentColor"
+                            >
+                              <path
+                                fillRule="evenodd"
+                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                clipRule="evenodd"
+                              />
+                            </svg>
+                            <span>{feature}</span>
+                          </li>
+                        ))}
+                    </ul>{" "}
+                    {/* Preço e botão de ação */}
                     <div className="mt-8 space-y-4">
                       <p className="text-2xl font-semibold text-gray-900">
                         {plan.price}
-                      </p>
+                      </p>{" "}
                       <Button
-                        className={`w-full ${
-                          plan.bestValue
-                            ? "bg-[#0096FF] hover:bg-blue-500 text-white"
-                            : "bg-gray-100 hover:bg-gray-200 text-gray-800"
-                        } font-medium`}
-                        onClick={() => window.open(generateWhatsAppLink(plan), "_blank")}
+                        className="w-full bg-[#0096FF] hover:bg-blue-500 text-white font-medium"
+                        onClick={() =>
+                          window.open(generateWhatsAppLink(plan), "_blank")
+                        }
                       >
                         Contratar agora
                       </Button>

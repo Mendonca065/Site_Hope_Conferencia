@@ -17,7 +17,6 @@ export const Hero = () => {
           <span className="absolute -left-6 md:left-4 top-24 lg:top-28 w-24 h-24 rotate-90 skew-x-12 rounded-3xl bg-gradient-to-r from-[#0096FF] to-blue-400 blur-xl opacity-60 lg:opacity-95 lg:block hidden"></span>
           <span className="absolute right-4 bottom-12 w-24 h-24 rounded-3xl bg-[#0096FF] blur-xl opacity-80"></span>
         </div>
-
         <div className="relative flex flex-col items-start text-left lg:py-8 lg:max-w-none max-w-3xl mx-auto lg:mx-0 lg:flex-1 lg:w-1/2">
           {" "}
           <h1 className="text-heading-1 text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-bold w-full">
@@ -37,12 +36,12 @@ export const Hero = () => {
           >
             <span className="relative z-[5]">Assine Já</span>
           </Button>
-        </div>
-
+        </div>{" "}
         <div className="flex flex-1 lg:w-1/2 lg:h-auto relative lg:max-w-none lg:mx-0 mx-auto max-w-3xl">
+          {" "}
           <img
-            src="https://images.pexels.com/photos/7773731/pexels-photo-7773731.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-            alt="Hero image"
+            src="https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg"
+            alt="Profissional usando tecnologia"
             width={2350}
             height={2359}
             className="lg:absolute lg:w-full lg:h-full rounded-3xl object-cover lg:max-h-none max-h-96"
