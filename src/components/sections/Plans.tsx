@@ -2,8 +2,7 @@ import { useState } from "react";
 import {
   apartmentPlans,
   housePlans,
-  apartmentMeshPlans, // Novo: Importando planos mesh específicos para apartamento
-  houseMeshPlans, // Novo: Importando planos mesh específicos para casa
+  apartmentMeshPlans,
   Plan,
 } from "../../utils/plan-pricing";
 import { Button } from "../shared/Button";
@@ -30,16 +29,23 @@ export const Plans = () => {
   // Estado para controlar qual tipo de plano está sendo exibido
   const [isHousePlans, setIsHousePlans] = useState(false);
   const [isMeshPlans, setIsMeshPlans] = useState(false); // Novo: Estado para controlar visualização de planos mesh
-
   // Seleciona o conjunto de planos baseado nos estados
-  // Novo: Lógica atualizada para selecionar planos mesh específicos para cada tipo
+  // Nota: Planos mesh estão disponíveis apenas para apartamentos
   const currentPlans: Plan[] = isMeshPlans
-    ? isHousePlans
-      ? houseMeshPlans // Planos mesh para casa
-      : apartmentMeshPlans // Planos mesh para apartamento
+    ? !isHousePlans
+      ? apartmentMeshPlans // Planos mesh para apartamento
+      : housePlans // Se tentar mesh + casa, mostra planos normais de casa
     : isHousePlans
     ? housePlans // Planos normais para casa
     : apartmentPlans; // Planos normais para apartamento
+
+  const generateWhatsAppLink = (plan: Plan) => {
+    const baseUrl = "https://wa.me/5583931429400"; // G3NET's WhatsApp number
+    const message = encodeURIComponent(
+      `Olá! Gostaria de contratar o plano ${plan.title} por ${plan.price}`
+    );
+    return `${baseUrl}?text=${message}`;
+  };
 
   return (
     <section id="plans" className="py-16">
@@ -75,27 +81,27 @@ export const Plans = () => {
             <button
               onClick={() => {
                 setIsHousePlans(false); // Alterado: Agora só altera o tipo de moradia
+                setIsMeshPlans(false); // Reseta mesh ao trocar
               }}
               className={`flex items-center gap-2 px-4 py-2 rounded-full transition-all duration-300 ${
                 !isHousePlans // Alterado: Estilo ativo baseado apenas no tipo de moradia
                   ? "bg-white shadow-md text-blue-600"
                   : "text-gray-600 hover:text-gray-900"
               }`}
-            >
-              <svg
+            >              <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
                 fill="currentColor"
                 className="w-5 h-5"
               >
-                <path d="M11.47 3.84a.75.75 0 011.06 0l8.69 8.69a.75.75 0 101.06-1.06l-8.689-8.69a2.25 2.25 0 00-3.182 0l-8.69 8.69a.75.75 0 001.061 1.06l8.69-8.69z" />
-                <path d="M12 5.432l8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 01-.75-.75v-4.5a.75.75 0 00-.75-.75h-3a.75.75 0 00-.75.75V21a.75.75 0 01-.75.75H5.625a1.875 1.875 0 01-1.875-1.875v-6.198a2.29 2.29 0 00.091-.086L12 5.43z" />
+                <path fillRule="evenodd" d="M4.5 2.25a.75.75 0 000 1.5v16.5h-.75a.75.75 0 000 1.5h16.5a.75.75 0 000-1.5h-.75V3.75a.75.75 0 000-1.5h-15zM9 6a.75.75 0 000 1.5h1.5a.75.75 0 000-1.5H9zm-.75 3.75A.75.75 0 019 9h1.5a.75.75 0 010 1.5H9a.75.75 0 01-.75-.75zM9 12a.75.75 0 000 1.5h1.5a.75.75 0 000-1.5H9zm3.75-5.25A.75.75 0 0113.5 6H15a.75.75 0 010 1.5h-1.5a.75.75 0 01-.75-.75zM13.5 9a.75.75 0 000 1.5H15A.75.75 0 0015 9h-1.5zm-.75 3.75a.75.75 0 01.75-.75H15a.75.75 0 010 1.5h-1.5a.75.75 0 01-.75-.75zM9 19.5v-1.5h6v1.5H9z" clipRule="evenodd" />
               </svg>
               Apartamento
             </button>
             <button
               onClick={() => {
                 setIsHousePlans(true); // Alterado: Agora só altera o tipo de moradia
+                setIsMeshPlans(false); // Reseta mesh ao trocar
               }}
               className={`flex items-center gap-2 px-4 py-2 rounded-full transition-all duration-300 ${
                 isHousePlans // Alterado: Estilo ativo baseado apenas no tipo de moradia
@@ -120,29 +126,31 @@ export const Plans = () => {
             </button>
           </div>
 
-          {/* Botão de Wi-Fi Mesh - Novo: Totalmente independente dos botões de tipo */}
-          <button
-            onClick={() => setIsMeshPlans(!isMeshPlans)}
-            className={`flex items-center gap-2 px-6 py-2 rounded-full transition-all duration-300 mb-8 mx-auto ${
-              isMeshPlans
-                ? "bg-[#0096FF] text-white shadow-md"
-                : "bg-gray-100 text-gray-600 hover:text-gray-900"
-            }`}
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="currentColor"
-              className="w-5 h-5"
+          {/* Botão Wi-Fi Mesh - Só aparece quando apartamento está selecionado */}
+          {!isHousePlans && (
+            <button
+              onClick={() => setIsMeshPlans(!isMeshPlans)}
+              className={`flex items-center gap-2 px-6 py-2 rounded-full transition-all duration-300 mb-8 mx-auto ${
+                isMeshPlans
+                  ? "bg-blue-600 text-white shadow-md"
+                  : "bg-gray-100 text-gray-600 hover:text-gray-900"
+              }`}
             >
-              <path
-                fillRule="evenodd"
-                d="M1.371 8.143c5.858-5.857 15.356-5.857 21.213 0a.75.75 0 010 1.061l-.53.53a.75.75 0 01-1.06 0c-4.98-4.979-13.053-4.979-18.032 0a.75.75 0 01-1.06 0l-.53-.53a.75.75 0 010-1.06zm3.182 3.182c4.1-4.1 10.749-4.1 14.85 0a.75.75 0 010 1.061l-.53.53a.75.75 0 01-1.062 0 8.25 8.25 0 00-11.667 0 .75.75 0 01-1.06 0l-.53-.53a.75.75 0 010-1.06zm3.204 3.182a6 6 0 018.486 0 .75.75 0 010 1.061l-.53.53a.75.75 0 01-1.061 0 3.75 3.75 0 00-5.304 0 .75.75 0 01-1.06 0l-.53-.53a.75.75 0 010-1.06zm3.182 3.182a1.5 1.5 0 012.122 0 .75.75 0 010 1.061l-.53.53a.75.75 0 01-1.061 0 .75.75 0 01-1.061 0l-.53-.53a.75.75 0 010-1.06z"
-                clipRule="evenodd"
-              />
-            </svg>
-            Wi-Fi Mesh
-          </button>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                className="w-5 h-5"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M1.371 8.143c5.858-5.857 15.356-5.857 21.213 0a.75.75 0 010 1.061l-.53.53a.75.75 0 01-1.06 0c-4.98-4.979-13.053-4.979-18.032 0a.75.75 0 01-1.06 0l-.53-.53a.75.75 0 010-1.06zm3.182 3.182c4.1-4.1 10.749-4.1 14.85 0a.75.75 0 010 1.061l-.53.53a.75.75 0 01-1.062 0 8.25 8.25 0 00-11.667 0 .75.75 0 01-1.06 0l-.53-.53a.75.75 0 010-1.06zm3.204 3.182a6 6 0 018.486 0 .75.75 0 010 1.061l-.53.53a.75.75 0 01-1.061 0 3.75 3.75 0 00-5.304 0 .75.75 0 01-1.06 0l-.53-.53a.75.75 0 010-1.06zm3.182 3.182a1.5 1.5 0 012.122 0 .75.75 0 010 1.061l-.53.53a.75.75 0 01-1.061 0 .75.75 0 01-1.061 0l-.53-.53a.75.75 0 010-1.06z"
+                  clipRule="evenodd"
+                />
+              </svg>
+              Cobertura Ampliada
+            </button>
+          )}
         </Container>
       </FadeInSection>
 
@@ -156,8 +164,7 @@ export const Plans = () => {
             <FadeInSection key={key} delay={key * 200}>
               {/* Card do plano com gradiente na borda e hover animation */}
               <div className="relative group h-full transform transition-all duration-300 hover:scale-105">
-                {" "}
-                <div
+                {" "}                <div
                   className={`${
                     plan.bestValue ? "bg-[#0096FF]" : "bg-white"
                   } p-1 rounded-3xl h-full shadow-lg`}
@@ -168,18 +175,11 @@ export const Plans = () => {
                       <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#0096FF] text-white text-sm font-medium px-4 py-1 rounded-full">
                         Mais popular
                       </div>
-                    )}
-
-                    {/* Informações do plano */}
-                    <h3 className="text-2xl font-semibold text-gray-900">
+                    )}                    {/* Título do plano - aumentado e com margem maior */}
+                    <h3 className="text-4xl font-bold mb-8 text-gray-900">
                       {plan.title}
-                    </h3>
-                    <p className="mt-4 text-4xl font-bold text-gray-900">
-                      {plan.price}
-                    </p>
-
-                    {/* Lista de características com ícones de check */}
-                    <ul className="mt-6 flex-1 space-y-3 text-left text-gray-600">
+                    </h3>                    {/* Lista de características com ícones de check */}
+                    <ul className="flex-1 space-y-3 text-left text-gray-600">
                       {plan.features.map((feature, keyFeatures) => (
                         <li
                           key={keyFeatures}
@@ -204,20 +204,18 @@ export const Plans = () => {
                           <span>{feature}</span>
                         </li>
                       ))}
-                    </ul>
-
-                    {/* Botão de ação com link para WhatsApp */}
-                    <div className="mt-8">
-                      {" "}
+                    </ul>                    {/* Preço e botão de ação */}
+                    <div className="mt-8 space-y-4">
+                      <p className="text-2xl font-semibold text-gray-900">
+                        {plan.price}
+                      </p>
                       <Button
                         className={`w-full ${
                           plan.bestValue
-                            ? "bg-[#0096FF] hover:bg-blue-500"
-                            : "bg-gray-100 hover:bg-gray-200"
-                        } text-${
-                          plan.bestValue ? "white" : "gray-800"
+                            ? "bg-[#0096FF] hover:bg-blue-500 text-white"
+                            : "bg-gray-100 hover:bg-gray-200 text-gray-800"
                         } font-medium`}
-                        onClick={() => window.open("LINK", "_blank")} // TODO: Adicionar link do WhatsApp
+                        onClick={() => window.open(generateWhatsAppLink(plan), "_blank")}
                       >
                         Contratar agora
                       </Button>

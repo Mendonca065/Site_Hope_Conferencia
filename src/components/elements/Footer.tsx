@@ -13,7 +13,6 @@ export const Footer = () => {
           <div className="space-y-6">
             <div className="flex flex-col space-y-4">
               <img src={logo} alt="G3NET Logo" className="w-32" />
-              <span className="text-xl font-bold">Fiber</span>
             </div>
             {/* Descrição da empresa */}
             <p className="text-gray-200">
@@ -29,17 +28,17 @@ export const Footer = () => {
               {/* Endereço com ícone */}
               <p className="flex items-center gap-2">
                 <i className="fas fa-map-marker-alt"></i>
-                Av. Principal, 1000, Centro, São Paulo - SP
+                Av. Pres. José Linhares, 204 - Sala 203 - Bessa, João Pessoa - PB
               </p>
               {/* Telefone com ícone */}
               <p className="flex items-center gap-2">
                 <i className="fas fa-phone"></i>
-                (11) 3000-1000
+                (83) 31429400
               </p>
               {/* Email com ícone */}
               <p className="flex items-center gap-2">
                 <i className="fas fa-envelope"></i>
-                contato@g3net.com.br
+                contato@g3netfibra.com.br
               </p>
             </div>
           </div>

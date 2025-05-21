@@ -15,33 +15,35 @@ export interface Plan {
 
 export const apartmentPlans: Plan[] = [
   {
-    title: "Ultra 600 Mbps",
-    price: "R$79,90/mês",
+    title: "600 MEGA",
+    price: "R$99,90/mês",
     features: [
-      "Download até 600 Mbps",
-      "Upload até 300 Mbps",
-      "Wi-Fi 6 de alta performace",
+      "Download até 600 MEGA",
+      "Upload até 300 MEGA",
+      "1 ponto Wi-Fi 6 de alta performace",
       "Instalação Gratuita",
     ],
   },
   {
-    title: "Ultra 1 Gbps",
+    title: "1 GIGA",
     price: "R$119,90/mês",
     features: [
-      "Download até 1 Gbps",
-      "Upload até 500 Mbps",
-      "Wi-Fi 6 de alta performace",
+      "Download até 1000 MEGA",
+      "Upload até 500 MEGA",
+      "1 ponto Wi-Fi 6 Plus de alta performace",
+      "Streaming 4K sem travamentos",
       "Instalação Gratuita",
     ],
     bestValue: true,
   },
   {
-    title: "Ultra 1.5 Gbps",
+    title: "1.5 GIGA",
     price: "R$249,90/mês",
     features: [
-      "Download até 1.5 Gbps",
-      "Upload até 750 Mbps",
-      "Wi-Fi 7 de alta performace",
+      "Download até 1500 MEGA",
+      "Upload até 750 MEGA",
+      "1 ponto Wi-Fi 7 de alta performace",
+      "Roteador com portas 2.5GE",
       "Instalação Gratuita",
     ],
   },
@@ -49,34 +51,32 @@ export const apartmentPlans: Plan[] = [
 
 export const housePlans: Plan[] = [
   {
-    title: "Casa 400 Mbps",
-    price: "R$89,90/mês",
+    title: "Essencial",
+    price: "R$250/mês",
     features: [
-      "Download até 400 Mbps",
-      "Upload até 200 Mbps",
-      "Wi-Fi 6 de alta performance",
-      "Instalação Gratuita + Roteador",
-    ],
-  },
-  {
-    title: "Casa 800 Mbps",
-    price: "R$129,90/mês",
-    features: [
-      "Download até 800 Mbps",
-      "Upload até 400 Mbps",
-      "Wi-Fi 6 de alta performance",
-      "Instalação Gratuita + Roteador",
+      "Download até 1000 MEGA",
+      "Upload até 500 MEGA",
+      "Wi-Fi 6+ (ultravelocidade)",
+      "Portas Gigabit Ethernet",
+      "Projeto de rede exclusivo para sua residência",
+      "Garantia de velocidade contratada",
+      "Instalação Gratuita",
+      "Suporte Técnico 24/7",
     ],
     bestValue: true,
   },
   {
-    title: "Casa 1.2 Gbps",
-    price: "R$199,90/mês",
+    title: "Premium",
+    price: "R$450/mês",
     features: [
-      "Download até 1.2 Gbps",
-      "Upload até 600 Mbps",
-      "Wi-Fi 6 de alta performance",
-      "Instalação Gratuita + 2 Roteadores",
+      "Download até 2000 MEGA",
+      "Upload até 1000 MEGA",
+      "Ponto Wi-Fi 7 (tecnologia de ponta)",
+      "Portas 2.5 Gigabit Ethernet",
+      "Projeto de rede exclusivo para sua residência",
+      "Garantia de velocidade contratada",
+      "Instalação Gratuita",
+      "Suporte Técnico 24/7",
     ],
   },
 ];
@@ -89,87 +89,26 @@ export const housePlans: Plan[] = [
  */
 export const apartmentMeshPlans: Plan[] = [
   {
-    title: "Mesh Apartamento Básico",
+    title: "Mesh 800 Mega",
+    price: "R$129,90/mês",
+    features: [
+      "Download até 800 Mbps",
+      "Upload até 400 Mbps",
+      "2 Pontos Mesh Wi-Fi 6+", // Melhor custo-benefício
+      "Zero dead zones",
+      "Instalação Gratuita",
+    ],
+    bestValue: true,
+  },
+  {
+    title: "Mesh 1 Giga",
     price: "R$149,90/mês",
     features: [
-      "2 Pontos de Wi-Fi Mesh", // Ideal para apartamentos pequenos
-      "Cobertura até 120m²",
-      "Wi-Fi 6 de alta performance",
-      "Configuração Profissional",
-      "Suporte Técnico Prioritário",
-    ],
-  },
-  {
-    title: "Mesh Apartamento Plus",
-    price: "R$199,90/mês",
-    features: [
-      "3 Pontos de Wi-Fi Mesh", // Melhor custo-benefício
-      "Cobertura até 200m²",
-      "Wi-Fi 6 de alta performance",
-      "Configuração Profissional",
-      "Suporte Técnico Prioritário",
-      "App de Gerenciamento",
-    ],
-    bestValue: true,
-  },
-  {
-    title: "Mesh Apartamento Pro",
-    price: "R$299,90/mês",
-    features: [
-      "4 Pontos de Wi-Fi Mesh", // Para apartamentos grandes/cobertura
-      "Cobertura até 300m²",
-      "Wi-Fi 6E de alta performance",
-      "Configuração Profissional",
-      "Suporte Técnico VIP 24/7",
-      "App de Gerenciamento Premium",
-      "Personalização de Rede",
-    ],
-  },
-];
-
-/**
- * Planos Mesh para Casas
- * - Adaptados para residências maiores
- * - Começam com 3 pontos de acesso
- * - Coberturas de 200m² a 500m²
- * - Preços ajustados para maior área e mais equipamentos
- */
-export const houseMeshPlans: Plan[] = [
-  {
-    title: "Mesh Casa Básico",
-    price: "R$189,90/mês",
-    features: [
-      "3 Pontos de Wi-Fi Mesh", // Mínimo recomendado para casas
-      "Cobertura até 200m²",
-      "Wi-Fi 6 de alta performance",
-      "Configuração Profissional",
-      "Suporte Técnico Prioritário",
-    ],
-  },
-  {
-    title: "Mesh Casa Plus",
-    price: "R$249,90/mês",
-    features: [
-      "4 Pontos de Wi-Fi Mesh", // Ideal para maioria das casas
-      "Cobertura até 350m²",
-      "Wi-Fi 6 de alta performance",
-      "Configuração Profissional",
-      "Suporte Técnico Prioritário",
-      "App de Gerenciamento",
-    ],
-    bestValue: true,
-  },
-  {
-    title: "Mesh Casa Pro",
-    price: "R$349,90/mês",
-    features: [
-      "5 Pontos de Wi-Fi Mesh", // Para casas grandes/sobrados
-      "Cobertura até 500m²",
-      "Wi-Fi 6E de alta performance",
-      "Configuração Profissional",
-      "Suporte Técnico VIP 24/7",
-      "App de Gerenciamento Premium",
-      "Personalização de Rede",
+      "Download até 1000 Mbps",
+      "Upload até 500 Mbps",
+      "2 Pontos Mesh Wi-Fi 6+", // Para apartamentos grandes/cobertura
+      "Zero dead zones",
+      "Instalação Gratuita",
     ],
   },
 ];

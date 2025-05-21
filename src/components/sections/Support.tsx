@@ -75,7 +75,7 @@ export const Support = () => {
                     </h3>
                     <p className="text-gray-600">83 31429400</p>
                     <p className="text-gray-500 text-sm">
-                      Seg-Sex: 8h às 20h | Sáb: 8h às 16h
+                      Seg-Sex: 8h às 18h | Sáb: 8h às 12h
                     </p>
                   </div>
                 </div>
@@ -134,8 +134,8 @@ export const Support = () => {
                     <h3 className="text-xl font-semibold text-gray-900">
                       Endereço
                     </h3>
-                    <p className="text-gray-600">Av. Principal, 1000</p>
-                    <p className="text-gray-600">Centro, São Paulo - SP</p>
+                    <p className="text-gray-600">Av. Pres. José Linhares, 204 - Sala 203</p>
+                    <p className="text-gray-600">Bessa, João Pessoa - PB</p>
                   </div>
                 </div>
               </div>
