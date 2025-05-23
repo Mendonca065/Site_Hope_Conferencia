@@ -69,11 +69,12 @@ export const Support = () => {
                       />
                     </svg>
                   </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-gray-900">
+                  <div>                    <h3 className="text-xl font-semibold text-gray-900">
                       Telefone
                     </h3>
-                    <p className="text-gray-600">83 31429400</p>
+                    <a href="https://wa.me/558331429400" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-[#0096FF] transition-colors">
+                      83 31429400
+                    </a>
                     <p className="text-gray-500 text-sm">
                       Seg-Sex: 8h às 18h | Sáb: 8h às 12h
                     </p>

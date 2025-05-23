@@ -30,10 +30,11 @@ export const Footer = () => {
                 <i className="fas fa-map-marker-alt"></i>
                 Av. Pres. José Linhares, 204 - Sala 203 - Bessa, João Pessoa - PB
               </p>
-              {/* Telefone com ícone */}
-              <p className="flex items-center gap-2">
+              {/* Telefone com ícone */}                <p className="flex items-center gap-2">
                 <i className="fas fa-phone"></i>
-                (83) 31429400
+                <a href="https://wa.me/558331429400" target="_blank" rel="noopener noreferrer" className="hover:text-[#0096FF] transition-colors">
+                  (83) 31429400
+                </a>
               </p>
               {/* Email com ícone */}
               <p className="flex items-center gap-2">
