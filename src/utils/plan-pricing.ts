@@ -73,7 +73,7 @@ export const housePlans: Plan[] = [
     features: [
       "Download até 1000 Mbps",
       "Upload até 500 Mbps",
-      "Cobertura Amplicada com Mesh",
+      "Cobertura Ampliada com Mesh",
       "2 Ponto Wi-Fi 6+ (ultravelocidade)",
       "Portas Gigabit Ethernet",
       "Projeto de rede exclusivo para sua residência",
@@ -110,10 +110,9 @@ export const apartmentMeshPlans: Plan[] = [
     features: [
       "Download até 600 Mbps",
       "Upload até 300 Mbps",
-      "2 Pontos Mesh Wi-Fi 6+", // Melhor custo-benefício
+      "2 Pontos Mesh Wi-Fi 6", // Melhor custo-benefício
       "Instalação Gratuita",
     ],
-    bestValue: true,
   },
   {
     title: "Mesh 800 MEGA",

@@ -103,7 +103,9 @@ export const Support = () => {
                       E-mail
                     </h3>
                     <p className="text-gray-600">contato@g3netfibra.com.br</p>
-                    <p className="text-gray-500 text-sm">Retorno em até 24h</p>
+                    <p className="text-gray-500 text-sm">
+                      Retorno em até 24h úteis.
+                    </p>
                   </div>
                 </div>
 
@@ -134,7 +136,9 @@ export const Support = () => {
                     <h3 className="text-xl font-semibold text-gray-900">
                       Endereço
                     </h3>
-                    <p className="text-gray-600">Av. Pres. José Linhares, 204 - Sala 203</p>
+                    <p className="text-gray-600">
+                      Av. Pres. José Linhares, 204 - Sala 203
+                    </p>
                     <p className="text-gray-600">Bessa, João Pessoa - PB</p>
                   </div>
                 </div>
