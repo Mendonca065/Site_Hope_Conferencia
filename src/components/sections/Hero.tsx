@@ -6,46 +6,36 @@ import { Paragraph } from "../shared/Paragraph";
 
 export const Hero = () => {
   return (
-    // Fundo da seção hero alterado para #D3DEEC e altura aumentada
     <section
-      className="relative pt-32 lg:pt-36 min-h-[70vh] lg:min-h-[80vh] flex items-center"
+      className="relative pt-32 lg:pt-36 min-h-[90vh] lg:min-h-[100vh] flex items-center"
       id="home"
-      style={{ backgroundColor: "#D3DEEC" }}
+      style={{ backgroundColor: "#1A1A1A" }}
     >
       <Container className="flex flex-col lg:flex-row gap-10 lg:gap-12">
-        <div className="absolute w-full lg:w-1/2 inset-y-0 lg:right-0">
-          <span className="absolute -left-6 md:left-4 top-24 lg:top-28 w-24 h-24 rotate-90 skew-x-12 rounded-3xl bg-gradient-to-r from-[#0096FF] to-blue-400 blur-xl opacity-60 lg:opacity-95 lg:block hidden"></span>
-          <span className="absolute right-4 bottom-12 w-24 h-24 rounded-3xl bg-[#0096FF] blur-xl opacity-80"></span>
+        <div className="absolute w-full inset-y-0">
+          <span className="absolute left-1/4 top-1/3 w-96 h-96 rounded-full bg-[#FF9800] blur-[128px] opacity-20"></span>
+          <span className="absolute right-1/4 bottom-1/3 w-96 h-96 rounded-full bg-[#FF9800] blur-[128px] opacity-20"></span>
         </div>
-        <div className="relative flex flex-col items-start text-left lg:py-8 lg:max-w-none max-w-3xl mx-auto lg:mx-0 lg:flex-1 lg:w-1/2">
-          {" "}
-          <h1 className="text-heading-1 text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-bold w-full">
-            Tenha a Internet mais Rápida com{" "}
-            <span className="text-[#0096FF]">G3NET</span>
+        <div className="relative flex flex-col items-center text-center lg:py-8 max-w-4xl mx-auto">
+          <h1 className="text-white text-4xl sm:text-5xl md:text-6xl xl:text-7xl font-bold w-full mb-6">
+            HOPE <span className="text-[#FF9800]">'25</span>
           </h1>
-          <Paragraph className="mt-8">
-            Navegue, trabalhe e se divirta com a melhor experiência de internet.
-            Planos que cabem no seu bolso com máxima velocidade.
+          <div className="text-2xl sm:text-3xl md:text-4xl text-gray-300 font-light mb-8">
+            Transformando vidas através da fé
+          </div>
+          <Paragraph className="text-gray-400 text-lg sm:text-xl max-w-2xl mb-12">
+            Junte-se a nós para uma experiência única de adoração, conexão e transformação.
+            Um evento que vai marcar sua vida e fortalecer sua fé.
           </Paragraph>
           <Button
-            className="min-w-max text-white bg-[#0096FF] hover:bg-blue-500 transform transition-all duration-300 hover:scale-110 hover:-translate-y-1 mt-8"
+            className="min-w-max text-white bg-[#FF9800] hover:bg-[#F57C00] transform transition-all duration-300 hover:scale-110 hover:-translate-y-1 text-lg px-8 py-4"
             onClick={() => {
-              const plansSection = document.getElementById("plans");
-              plansSection?.scrollIntoView({ behavior: "smooth" });
+              const ticketsSection = document.getElementById("tickets");
+              ticketsSection?.scrollIntoView({ behavior: "smooth" });
             }}
           >
-            <span className="relative z-[5]">Assine Já</span>
+            <span className="relative z-[5]">Garanta seu lugar</span>
           </Button>
-        </div>{" "}
-        <div className="flex flex-1 lg:w-1/2 lg:h-auto relative lg:max-w-none lg:mx-0 mx-auto max-w-3xl">
-          {" "}
-          <img
-            src="https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg"
-            alt="Profissional usando tecnologia"
-            width={2350}
-            height={2359}
-            className="lg:absolute lg:w-full lg:h-full rounded-3xl object-cover lg:max-h-none max-h-96"
-          />
         </div>
       </Container>
     </section>

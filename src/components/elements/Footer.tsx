@@ -1,53 +1,57 @@
 import { Container } from "../shared/Container";
-import logo from "../../assets/LOGO HIGH TRANSPARENT.png";
-
-// Componente Footer: Rodapé do site com informações da empresa,
-// redes sociais, contato e copyright
 
 export const Footer = () => {
   return (
-    <footer className="pt-8 pb-12 bg-[#4B6BA2] text-white mt-16">
+    <footer className="pt-8 pb-12 bg-[#1A1A1A] text-white mt-16">
       <Container>
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
-          {/* Primeira seção: Logo, descrição e redes sociais */}
+          {/* Logo and Mission */}
           <div className="space-y-6">
             <div className="flex flex-col space-y-4">
-              <img src={logo} alt="G3NET Logo" className="w-32" />
+              <img src="/logo-high-transparent.png" alt="HOPE '25 Logo" className="w-32" />
             </div>
-            {/* Descrição da empresa */}
-            <p className="text-gray-200">
-              Conectando você ao que realmente importa. Internet rápida, estável
-              e com o melhor suporte.
+            <p className="text-gray-400">
+              Um evento que vai transformar vidas e fortalecer a fé da nossa geração.
             </p>
           </div>
 
-          {/* Segunda seção: Informações de contato */}
+          {/* Contact Information */}
           <div className="lg:col-span-2 lg:justify-self-end">
-            <h3 className="text-xl font-semibold mb-6">Contato</h3>
+            <h3 className="text-xl font-semibold mb-6 text-[#FF9800]">Contato</h3>
             <div className="space-y-4">
-              {/* Endereço com ícone */}
-              <p className="flex items-center gap-2">
-                <i className="fas fa-map-marker-alt"></i>
-                Av. Pres. José Linhares, 204 - Sala 203 - Bessa, João Pessoa - PB
+              <p className="flex items-center gap-2 text-gray-400">
+                <i className="fas fa-map-marker-alt text-[#FF9800]"></i>
+                Centro de Convenções - João Pessoa, PB
               </p>
-              {/* Telefone com ícone */}                <p className="flex items-center gap-2">
-                <i className="fas fa-phone"></i>
-                <a href="https://wa.me/558331429400" target="_blank" rel="noopener noreferrer" className="hover:text-[#0096FF] transition-colors">
-                  (83) 31429400
+              <p className="flex items-center gap-2">
+                <i className="fas fa-phone text-[#FF9800]"></i>
+                <a href="tel:+558398765432" className="text-gray-400 hover:text-[#FF9800] transition-colors">
+                  (83) 98765-4321
                 </a>
               </p>
-              {/* Email com ícone */}
               <p className="flex items-center gap-2">
-                <i className="fas fa-envelope"></i>
-                contato@g3netfibra.com.br
+                <i className="fas fa-envelope text-[#FF9800]"></i>
+                <a href="mailto:contato@hope25.com.br" className="text-gray-400 hover:text-[#FF9800] transition-colors">
+                  contato@hope25.com.br
+                </a>
               </p>
+              <div className="flex gap-4 pt-4">
+                <a href="#" className="text-[#FF9800] hover:text-[#F57C00] transition-colors">
+                  <i className="fab fa-instagram fa-lg"></i>
+                </a>
+                <a href="#" className="text-[#FF9800] hover:text-[#F57C00] transition-colors">
+                  <i className="fab fa-facebook fa-lg"></i>
+                </a>
+                <a href="#" className="text-[#FF9800] hover:text-[#F57C00] transition-colors">
+                  <i className="fab fa-youtube fa-lg"></i>
+                </a>
+              </div>
             </div>
           </div>
         </div>
 
-        {/* Seção de copyright com borda superior */}
-        <div className="border-t border-gray-400/20 mt-12 pt-8 text-center">
-          <p>© 2025 G3NET. Todos os direitos reservados.</p>
+        <div className="border-t border-gray-800 mt-12 pt-8 text-center">
+          <p className="text-gray-500">© 2025 HOPE. Todos os direitos reservados.</p>
         </div>
       </Container>
     </footer>

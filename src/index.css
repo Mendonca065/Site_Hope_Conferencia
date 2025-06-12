@@ -12,14 +12,14 @@
    Essas variáveis serão utilizadas para manter consistência
    e facilitar futuras alterações de tema.
 ========================================================== */
-:root {
-  --color-bg: 255 255 255; /* Cor de fundo principal */
-  --color-box: 255 255 255; /* Cor de fundo das caixas (cards, containers) */
-  --box-border: 229 231 235; /* Cor da borda das caixas */
-  --box-sd: 226 232 240 / 0.5; /* Sombra das caixas (com transparência) */
-  --heading-1: 23 37 84; /* Cor para títulos grandes */
-  --heading-2: 31 41 55; /* Cor para títulos médios */
-  --heading-3: 55 65 81; /* Cor para subtítulos / textos de apoio */
+:root {  --color-bg: 26 26 26; /* Cor de fundo principal - Dark theme */
+  --color-box: 38 38 38; /* Cor de fundo das caixas (cards, containers) */
+  --box-border: 64 64 64; /* Cor da borda das caixas */
+  --box-sd: 0 0 0 / 0.5; /* Sombra das caixas (com transparência) */
+  --heading-1: 255 255 255; /* Cor para títulos grandes */
+  --heading-2: 229 229 229; /* Cor para títulos médios */
+  --heading-3: 209 213 219; /* Cor para subtítulos / textos de apoio */
+  --primary: 255 152 0; /* Cor primária - Orange */
 }
 
 /* ==========================================================
