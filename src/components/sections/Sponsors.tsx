@@ -1,6 +1,5 @@
 import { Container } from "../shared/Container";
 import { FadeInSection } from "../shared/FadeInSection";
-import { Title } from "../shared/Title";
 
 export const Sponsors = () => {
   const sponsors = [
