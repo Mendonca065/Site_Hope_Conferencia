@@ -5,7 +5,7 @@ import { BtnLink } from "../shared/BtnLink";
 // Array de objetos que define os itens de navegação da barra
 export const navItems = [
   { href: "#home", text: "Home" },
-  { href: "#tickets", text: "Ingressos" },
+  { href: "#tickets", text: "Inscrições" },
   //{ href: "#merchandise", text: "Merchandise" },
   { href: "#donations", text: "Contribuir" },
 ];
@@ -34,7 +34,7 @@ export const Navbar = () => {
             </ul>
             <div className="lg:min-w-max flex items-center sm:w-max w-full pb-6 lg:pb-0 border-b border-gray-800 lg:border-0 px-6 lg:px-0">
               <BtnLink
-                text="Comprar Ingressos"
+                text="Inscrições Gratis"
                 href="#tickets"
                 className="bg-[#FF9800] hover:bg-[#F57C00] font-semibold"
               />

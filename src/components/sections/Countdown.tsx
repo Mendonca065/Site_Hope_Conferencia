@@ -47,7 +47,7 @@ export const Countdown = () => {
       <Container>
         <FadeInSection>
           <div className="text-center mb-12">
-            <Title className="text-white">INGRESSOS DISPONÍVEIS EM</Title>
+            <Title className="text-white">INSCRIÇÕES DISPONÍVEIS EM</Title>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
@@ -58,11 +58,11 @@ export const Countdown = () => {
               { label: 'Segundos', value: timeLeft.seconds }
             ].map((item, index) => (
               <FadeInSection key={index} delay={index * 200}>
-                <div className="bg-[#262626] p-8 rounded-3xl border border-[#FF9800]/20 text-center group hover:border-[#FF9800]/40 transition-all duration-300">
+                <div className="bg-[#232323] p-8 rounded-3xl border border-[#FF9800]/20 text-center group hover:border-[#FF9800]/40 transition-all duration-300">
                   <span className="block text-5xl lg:text-6xl font-bold text-[#FF9800] mb-2">
                     {String(item.value).padStart(2, '0')}
                   </span>
-                  <span className="text-gray-400 text-lg">{item.label}</span>
+                  <span className="text-gray-300 text-lg uppercase tracking-wider">{item.label}</span>
                 </div>
               </FadeInSection>
             ))}
@@ -70,7 +70,7 @@ export const Countdown = () => {
           
           <div className="text-center mt-12">
             <Paragraph className="text-gray-400 mb-8">
-              Fique atento! A venda de ingressos começa em breve. Não perca a oportunidade de fazer parte deste momento único.
+              Fique atento! As inscrições começa em breve. Não perca a oportunidade de fazer parte deste momento único.
             </Paragraph>
           </div>
         </FadeInSection>

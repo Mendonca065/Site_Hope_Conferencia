@@ -21,7 +21,7 @@ export const Footer = () => {
             <div className="space-y-4">
               <p className="flex items-center gap-2 text-gray-400">
                 <i className="fas fa-map-marker-alt text-[#FF9800]"></i>
-                Centro de Convenções - João Pessoa, PB
+                Av. José Liberato, 157 - Igreja Batista Miramar, João Pessoa, PB
               </p>
               <p className="flex items-center gap-2">
                 <i className="fas fa-phone text-[#FF9800]"></i>
@@ -45,6 +45,20 @@ export const Footer = () => {
                 <a href="#" className="text-[#FF9800] hover:text-[#F57C00] transition-colors">
                   <i className="fab fa-youtube fa-lg"></i>
                 </a>
+              </div>
+              {/* Mapa */}
+              <div className="mt-6 rounded-xl overflow-hidden border border-[#FF9800]/20 shadow-lg">
+                <iframe
+                  title="Mapa Localização HOPE"
+                  src="https://www.google.com/maps?q=Av.+jose+liberato,+157,+Jo%C3%A3o+Pessoa,+PB&output=embed"
+                  width="100%"
+                  height="200"
+                  style={{ border: 0 }}
+                  allowFullScreen={false}
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="w-full h-[200px]"
+                ></iframe>
               </div>
             </div>
           </div>
